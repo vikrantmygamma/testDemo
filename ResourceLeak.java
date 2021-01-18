@@ -36,4 +36,16 @@ public class ResourceLeak {
             logger.error("Resource is not closed anywhere.",e);
         }
     }
+
+
+	  public void demo(String name, String surName) {
+		String surName = surName;
+		name = name;
+	   }
+public void method() {
+		Thread myThread = new Thread();
+		// EMB-ISSUE: CodeIssueNames.RUN_SHOULD_NOT_BE_CALLED_DIRECTLY
+		myThread.run();
+	}
+
 }
