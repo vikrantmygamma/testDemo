@@ -13,6 +13,7 @@ import java.security.SecureRandom;
 
 public class ResourceLeak {
     LoggerFactory logger = new LoggerFactory();
+	String count;
     public void process() {
         SecureRandom secureRandom = new SecureRandom();
         try {
@@ -38,9 +39,10 @@ public class ResourceLeak {
     }
 
 
-	  public void demo(String name, String surName) {
+	  public void demo(String name, String surName,String count) {
 		String surName = surName;
 		name = name;
+		  this.count = count;
 	   }
 public void method() {
 		Thread myThread = new Thread();
