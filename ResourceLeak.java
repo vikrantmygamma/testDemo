@@ -39,7 +39,7 @@ public class ResourceLeak {
     }
 
 
-	  public void demo(String name, String surName,String count) {
+	  public void demo(String name, String surName,String count,String preeti) {
 		String surName = surName;
 		name = name;
 		this.count = count;
