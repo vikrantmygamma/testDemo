@@ -42,7 +42,9 @@ public class ResourceLeak {
 	  public void demo(String name, String surName,String count) {
 		String surName = surName;
 		name = name;
-		  this.count = count;
+		this.count = count;
+	        preeti += preeti;
+		preeti = preeti;
 	   }
 public void method() {
 		Thread myThread = new Thread();
