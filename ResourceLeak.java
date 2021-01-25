@@ -16,6 +16,7 @@ public class ResourceLeak {
 	String count;
     public void process() {
         SecureRandom secureRandom = new SecureRandom();
+	     System.runFinalizersOnExit(true);
         try {
             PrintWriter out = new PrintWriter("");
             out.println("the text");
