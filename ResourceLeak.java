@@ -45,6 +45,7 @@ public class ResourceLeak {
 		this.count = count;
 	        preeti += preeti;
 		preeti = preeti;
+		 r += r;
 	   }
 public void method() {
 		Thread myThread = new Thread();
