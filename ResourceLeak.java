@@ -12,7 +12,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 public class ResourceLeak {
-	
+	private boolean active;
+    public void setActive(boolean b)
+          {
+            this.y = b;
+          }
 
     LoggerFactory logger = new LoggerFactory();
 	String count;
