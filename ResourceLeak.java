@@ -1,63 +1,52 @@
-package com.mariten.kanatools;
-
-import com.sun.org.slf4j.internal.LoggerFactory;
-
-import javax.crypto.Cipher;
-import javax.crypto.NoSuchPaddingException;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-
 public class ResourceLeak {
+private int x ,y ,z;
+	
 	private boolean active;
-    public void setActive(boolean b)
-          {
-            this.active = b;
-          }
-
-    LoggerFactory logger = new LoggerFactory();
-	String count;
-    public void process() {
-        SecureRandom secureRandom = new SecureRandom();
-	     System.runFinalizersOnExit(true);
-        try {
-            PrintWriter out = new PrintWriter("");
-            out.println("the text");
-            out.close();
-            Cipher c1 = Cipher.getInstance("DES");
-        } catch (IOException | NoSuchAlgorithmException | NoSuchPaddingException e) {
-            System.err.println();
-
-       
-
-        }
-
-    }
-    public void process2() {
-        try {
-            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("out.txt", true)));
-            out.println("the text");
-        } catch (IOException e) {
-            logger.error("Resource is not closed anywhere.",e);
-        }
-    }
-
-
-	  public void demo(String name, String surName,String count,String preeti) {
-		String surName = surName;
-		name = name;
-		this.count = count;
-	        preeti += preeti;
-		preeti = preeti;
-		 r += r;
-	   }
-public void method() {
-		Thread myThread = new Thread();
-		// EMB-ISSUE: CodeIssueNames.RUN_SHOULD_NOT_BE_CALLED_DIRECTLY
-		myThread.run();
+	
+	// EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS 
+	public void setX(int val) {
+		//this is for test
+		this.y = val;
 	}
 
+	// EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS 
+	public int getY() {
+		return this.x;
+	}
+
+	// EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS
+	  public boolean isActive()
+		  {
+		    return x;
+		  }
+
+	  		// EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS
+		  public void setActive(boolean b)
+		  {
+		    this.y = b;
+		  }
+		  
+		  // EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS/no-detect
+		  public int getName() {	
+			  System.out.println(" ");
+			  return this.x;
+			}
+		  
+			// EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS/no-detect
+		  	public void setName(int val) {
+			    System.out.println(" ");
+				this.y = val;
+			}
+		  	
+		 // EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS/no-detect 
+			public void setZ(int val) {
+				this.z = val;
+			}
+			
+			public int getZ(int val) {
+				 // EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS/no-detect 
+
+				return x;
+			}
+			
 }
