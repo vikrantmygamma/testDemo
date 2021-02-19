@@ -1,6 +1,6 @@
 public class ResourceLeak {
 private int x ,y ,z;
-	 public static void main(String args[]) throws Exception{  
+	 public static void main(String args[]) {  
 	     System.out.println("Hello");  
 	    }
 	private boolean active;
