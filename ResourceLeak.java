@@ -1,6 +1,8 @@
 public class ResourceLeak {
 private int x ,y ,z;
-	
+	 public static void main(String args[]) throws Exception{  
+	     System.out.println("Hello");  
+	    }
 	private boolean active;
 	
 	// EMB-ISSUE: CodeIssueNames.GETTERS_AND_SETTERS_SHOULD_ACCESS_THE_EXPECTED_FIELDS 
