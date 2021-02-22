@@ -2,10 +2,11 @@ import org.springframework.boot.SpringApplication;
 @SpringBootApplication
 public class ResourceLeak {
 private int x ,y ,z;
-		  public static void main(String[] args) 
-   		{
-     			 SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
-   		}
+		
+	 public static void main(String args[]) throws Exception{  
+	     SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
+	     System.out.println("Hello");  
+	    }  
 	private boolean active;
 	
 	 
