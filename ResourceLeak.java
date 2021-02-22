@@ -1,8 +1,11 @@
+import org.springframework.boot.SpringApplication;
+@SpringBootApplication
 public class ResourceLeak {
 private int x ,y ,z;
-	 public static void main(String args[]) {  
-	     System.out.println("Hello");  
-	    }
+		  public static void main(String[] args) 
+   		{
+     			 SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
+   		}
 	private boolean active;
 	
 	 
@@ -33,6 +36,9 @@ private int x ,y ,z;
 			  System.out.println(" ");
 			  return this.x;
 			}
+	
+
+  
 		  
 			
 		  	public void setName(int val) {
