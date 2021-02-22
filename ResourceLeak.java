@@ -1,7 +1,7 @@
 import org.springframework.boot.SpringApplication;
 @SpringBootApplication
 public class ResourceLeak {
-private int x ,y ,z;
+private int x ,y ,z,apiCount;
 		
 	 public static void main(String args[]) throws Exception{  
 	     SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
@@ -13,6 +13,12 @@ private int x ,y ,z;
 	public void setX(int val) {
 		//this is for test
 		this.y = val;
+	}
+	
+	public int getAPISize()
+	{
+	return apiCount;
+	
 	}
 
 	
