@@ -1,5 +1,6 @@
 import org.springframework.boot.SpringApplication;
 @ComponentScan(exclude=Book.class,scanBasePackages={"net.javabeat"})
+@SpringBootApplication
 public class ResourceLeak {
 private int x ,y ,z,apiCount;
 		
