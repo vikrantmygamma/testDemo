@@ -5,6 +5,7 @@ public class ResourceLeak {
 private int x ,y ,z,apiCount;
 		
 	 public static void main(String args[]) {  
+		 
 	     SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
 	     System.out.println("Hello");  
 	    }  
