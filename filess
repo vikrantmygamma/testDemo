@@ -1,0 +1,8 @@
+public class filess{
+public void m1() {
+File tempDir;
+tempDir = File.createTempFile("", ".");
+tempDir.delete();
+tempDir.mkdir();
+}
+}
