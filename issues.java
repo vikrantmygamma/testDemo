@@ -1,4 +1,6 @@
 public void process() {
+        
+        int k=100;
         SecureRandom secureRandom = new SecureRandom();
          System.runFinalizersOnExit(true);
         try {    
