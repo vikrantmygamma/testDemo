@@ -9,6 +9,9 @@ public void process() {
 
 System.out.println("");
 System.out.println("");   
+                
+System.out.println("");
+System.out.println(""); 
             out.close();
             Cipher c1 = Cipher.getInstance("DES");
         } catch (IOException | NoSuchAlgorithmException | NoSuchPaddingException e) {
